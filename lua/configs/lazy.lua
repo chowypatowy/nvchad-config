@@ -11,6 +11,11 @@ return {
     },
   },
 
+  change_detection = {
+    enabled = true, -- still reloads config
+    notify = false, -- no annoying "config changed" message
+  },
+
   performance = {
     rtp = {
       disabled_plugins = {
