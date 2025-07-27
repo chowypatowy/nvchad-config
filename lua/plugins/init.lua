@@ -66,4 +66,7 @@ return {
       require("luasnip").filetype_extend("typescriptreact", { "html" })
     end,
   },
+  {
+    "github/copilot.vim",
+  },
 }
