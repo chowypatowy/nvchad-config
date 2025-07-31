@@ -69,6 +69,12 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
+    config = function()
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+      vim.keymap.set("i", "<C-j>", 'copilot#Accept("<CR>")', { expr = true, silent = true, script = true })
+      vim.keymap.set("i", "<C-k>", 'copilot#Accept("<Tab>")', { expr = true, silent = true, script = true })
+    end,
   },
   {
     "epwalsh/obsidian.nvim",
