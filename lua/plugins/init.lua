@@ -33,7 +33,7 @@ return {
   --
 
   --   -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
+  { import = "nvchad.blink.lazyspec" },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -72,8 +72,13 @@ return {
     config = function()
       vim.g.copilot_no_tab_map = true
       vim.g.copilot_assume_mapped = true
-      vim.keymap.set("i", "<C-p>", 'copilot#Accept("<CR>")', { expr = true, silent = true, script = true })
-      vim.keymap.set("i", "<C-o>", 'copilot#Accept("<Tab>")', { expr = true, silent = true, script = true })
+      vim.keymap.set(
+        "i",
+        "<C-c>",
+        "copilot#Accept()",
+        { noremap = true, expr = true, silent = true, script = true, replace_keycodes = false }
+      )
+      -- vim.keymap.set("i", "<C-K>", 'copilot#Accept("<Tab>")', { expr = true, silent = true, script = true })
     end,
   },
   {
