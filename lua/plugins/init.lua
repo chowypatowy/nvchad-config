@@ -134,7 +134,8 @@ return {
   },
   {
     "SirVer/ultisnips",
-    event = "InsertEnter",
+    -- event = "InsertEnter",
+    ft = { "tex" },
     config = function()
       vim.g.UltiSnipsExpandTrigger = "<tab>"
       vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
