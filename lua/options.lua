@@ -14,3 +14,7 @@ o.wrap = true
 vim.o.relativenumber = true
 vim.o.number = true
 -- o.cursorlineopt ='both' -- to enable cursorline!
+
+-- enabling python3 interpreter 12/3/2025
+vim.g.loaded_python3_provider = nil
+vim.g.python3_host_prog = "/usr/bin/python3"
