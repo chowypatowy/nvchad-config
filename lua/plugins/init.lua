@@ -49,7 +49,6 @@ return {
       },
     },
   },
-
   {
     "windwp/nvim-ts-autotag",
     ft = { "html", "javascriptreact", "typescriptreact", "jsx", "tsx", "javascript", "typescript" },
@@ -59,20 +58,21 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
   -- autocomplete
+
   {
     "hrsh7th/nvim-cmp",
-    config = function()
-      local cmp = require "cmp"
-      cmp.setup {}
-      cmp.setup.filetype("tex", { enabled = false })
-    end,
+    opts = {
+      enabled = function()
+        return (vim.bo.ft ~= "tex")
+      end,
+    },
   },
   {
     "FelipeLema/cmp-async-path",
     enabled = false,
   },
   {
-    "hrsh7th/cmp-async-path",
+    "hrsh7th/cmp-path",
   },
   {
     "L3MON4D3/LuaSnip",
