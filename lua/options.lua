@@ -9,7 +9,9 @@ o.shiftwidth = 4
 o.tabstop = 4
 o.softtabstop = 4
 
-o.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true -- wrap at word boundaries
+vim.opt.breakindent = true -- keep indentation on wrapped lines
 
 vim.o.relativenumber = true
 vim.o.number = true

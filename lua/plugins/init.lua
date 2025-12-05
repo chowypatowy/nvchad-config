@@ -16,6 +16,17 @@ return {
   {
     "tpope/vim-surround",
     event = "BufReadPost",
+    config = function()
+      -- single $
+      vim.cmd [[
+      let g:surround_{char2nr('$')} = "$\r$"
+    ]]
+
+      -- double $$ (using key 'd' because surround cannot use "$$")
+      vim.cmd [[
+      let g:surround_{char2nr('d')} = "$$\r$$"
+    ]]
+    end,
   },
 
   {
