@@ -169,9 +169,25 @@ snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 endsnippet
 
 context "math()"
-snippet '@a' "alpha" wA
+snippet alpha "alpha" wA
+\alpha $0
 endsnippet
 
+
+context "math()"
+snippet beta "beta" wA
+\beta $0
+endsnippet
+
+context "math()"
+snippet delta "delta" wA
+\delta $0
+endsnippet
+
+context "math()"
+snippet gamma "gamma" wA
+\gamma $0
+endsnippet
 
 snippet sympy "sympyblock " w
 sympy $1 sympy$0
