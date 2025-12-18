@@ -15,7 +15,12 @@ snippet it "italicize"
 \textit{$1}$0
 endsnippet
 
-snippet defn "definition"
+snippet bf "boldface"
+\textbf{$1}$0
+endsnippet
+
+priority 1000
+snippet defn "definition" A
 definition
 endsnippet
 
@@ -301,8 +306,12 @@ snippet conj "conjugate" iA
 \overline{$1}$0
 endsnippet
 
+snippet Sigma "capial sigma / sum with no parameters" wA
+\sum
+endsnippet
+
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{${1:n}=${2:1}}^{${3:\infty}} ${4:a_n z^n}
 endsnippet
 
 snippet taylor "taylor" w
@@ -506,6 +515,11 @@ snippet -> "to" iA
 \to 
 endsnippet
 
+context "math()"
+snippet to "to" iA
+\to 
+endsnippet
+
 priority 200
 context "math()"
 snippet <-> "leftrightarrow" iA
@@ -581,6 +595,7 @@ snippet "\subset eq" "subset" Ai
 \subseteq
 endsnippet
 
+context "math()"
 snippet notin "not in " iA
 \not\in 
 endsnippet
